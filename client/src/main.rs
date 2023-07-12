@@ -9,7 +9,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
     let client = Client::new();
 
     // Parse an `http::Uri`...
-    let uri = "http://httpbin.org/ip".parse()?;
+    let uri = "http://localhost:3000/echo/uppercase".parse()?;
 
     // Await the response...
     let mut resp = client.get(uri).await?;
